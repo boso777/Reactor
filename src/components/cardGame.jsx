@@ -10,7 +10,7 @@ export default function CardGame({game}){return(<>
   <div className="card-body">
     <h2 className="card-title line-clamp-1">{game.name}</h2>
     <div className="card-actions justify-end">
-      <button className="btn btn-primary">Buy Now</button>
+      <button className="btn-custom">Buy Now</button>
     </div>
   </div>
 </div>

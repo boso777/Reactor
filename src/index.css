@@ -5,3 +5,10 @@
 @theme{
     --font-elms-sans: "Elms sans" , sans-serif;
 }
+
+.btn-custom{
+    background-color:cadetblue;
+    border-radius: 10px;
+    padding: 10px 30px;
+    margin: 0px;
+}
