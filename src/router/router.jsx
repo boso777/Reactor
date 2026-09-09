@@ -9,6 +9,9 @@ import AuthLayout from "../layouts/AuthLayout";
 import RegisterPage from "../views/auth/RegisterPage";
 import LoginPage from "../views/auth/LoginPage";
 import ProfilePage from "../views/auth/ProfilePage"
+import ProfileSettingsPage from "../views/auth/ProfileSettingsPage";
+
+
 
 const router = createBrowserRouter([
     {
@@ -49,6 +52,10 @@ const router = createBrowserRouter([
             {
                 path: routes.profile,
                 Component: ProfilePage
+            },
+            {
+                path: routes.profile_settings,
+                Component: ProfileSettingsPage
             }
         ]
     },
