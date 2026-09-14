@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router";
 import Layout from "../layouts/layout";
 import Homepage from "../views/homepage";
 import routes from "../router/routes";
-import {getAllGamesLoader, getAllGenres, getSearchedGames , getFilteredByCategory} from "./loaders"
+import {getAllGamesLoader, getAllGenres, getSearchedGames , getFilteredByCategory , getGameDetails} from "./loaders"
 import SearchPage from "../views/SearchPage";
 import GenrePage from "../views/GenrePage"
 import AuthLayout from "../layouts/AuthLayout";
@@ -10,8 +10,7 @@ import RegisterPage from "../views/auth/RegisterPage";
 import LoginPage from "../views/auth/LoginPage";
 import ProfilePage from "../views/auth/ProfilePage"
 import ProfileSettingsPage from "../views/auth/ProfileSettingsPage";
-
-
+import DetailPage from "../views/DetailPage";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +36,11 @@ const router = createBrowserRouter([
         ]
         
     },
+    {
+                path: routes.detail,
+                Component: DetailPage,
+                loader: getGameDetails,
+            },
     {
         path: '/auth',
         Component: AuthLayout,

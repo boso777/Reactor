@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export default function CardGame({game}){return(<>
 
 <div className="card bg-base-100  shadow-sm">
@@ -10,7 +12,7 @@ export default function CardGame({game}){return(<>
   <div className="card-body">
     <h2 className="card-title line-clamp-1">{game.name}</h2>
     <div className="card-actions justify-end">
-      <button className="btn-custom">Buy Now</button>
+      <Link to={`/detail/${game.id}`} className="btn-custom">Details</Link>
     </div>
   </div>
 </div>

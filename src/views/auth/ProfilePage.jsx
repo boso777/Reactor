@@ -9,6 +9,7 @@ export default function ProfilePage(){
 
     const {user , profile } = useContext(UserContext);
     const [avatarUrl , setAvatarUrl] = useState();
+    const [userFavourites , setUserFavourites] = useState();
 
     const download_avatar = async () => {
         if (profile) {
@@ -21,11 +22,21 @@ export default function ProfilePage(){
         
     const email = user?.email;
 
+    const get_favourite = async () => {
+      if(profile) {
+      let { data: favourites, error } = await supabase
+        .from("favourites")
+        .select("*")
+        .eq("profile_id", profile.id)
+        setUserFavourites(favourites)
+        }
+    };
+  
+
     useEffect(() => {
-        download_avatar();
-    }, [profile])
-
-
+            download_avatar();
+            get_favourite();
+        }, [profile]);
 
     return (
   <>
@@ -57,6 +68,16 @@ export default function ProfilePage(){
                 Modifica Profilo
               </Link>
             </article>
+          </section>
+          <section className="grid sm:grid-cols-1 sm:w-[50%] mt-6">
+            <ul className="bg-gray-950 text-nav-gray rounded-box p-6">
+              {userFavourites && userFavourites.map((favourite) =>{
+                return <div className="bg-gray-800 text-white my-3 rounded-box p-6">
+                  <li >{favourite.game_name}</li>
+                  <Link to={`/detail/${favourite.game_id}`}>Details</Link>
+                </div>
+              })}
+            </ul>
           </section>
         </>
       )}
