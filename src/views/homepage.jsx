@@ -10,7 +10,7 @@ export default function Homepage(){
 
     return(
     <>
-    <div className="flex flex-col align-middle justify-center">
+    <div className="flex flex-col align-middle justify-center bg-gray-800 text-white">
         <div className="flex align-middle justify-center mt-10">
             <h2 className="font-bold text-5xl text-blue-100">Your personal game catalogue!</h2>
         </div>

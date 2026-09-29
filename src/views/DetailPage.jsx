@@ -14,7 +14,7 @@ export default function DetailPage(){
     
     return(<>
         <main
-            style={{backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${game.background_image})`,}} className="min-h-screen bg-center bg-cover bg-fixed">
+            style={{backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${game.background_image})`,}} className="min-h-screen bg-center bg-cover bg-fixed bg-gray-800 text-white">
             <FaCircleArrowLeft className="text-3xl fixed bottom-6 text-white left-6 cursor-pointer" onClick={() => navigate(-1)} />
             <Header game={game} />
             {profile && <BodySection game={game} profile_id={profile.id}/>}

@@ -12,7 +12,7 @@ export default function Layout(){
     return(
     <>
     <Navbar />
-    <section className="grid grid-cols-7 gap-4">
+    <section className="grid grid-cols-7 gap-4 bg-gray-800 text-white">
         <div>
             <SideBar categories={categories}></SideBar>
         </div>

@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 export default function CardGame({game}){return(<>
 
-<div className="card bg-base-100  shadow-sm">
+<div className="card bg-base-100 my-2 shadow-sm bg-gray-600 text-white">
   <figure className="aspect-video">
     <img
       src={game.background_image}

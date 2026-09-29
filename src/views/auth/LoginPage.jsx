@@ -29,7 +29,7 @@ export default function LoginPage(){
 
     return (<>
 
-    <div className="h-screen flex flex-col align-middle justify-top ">
+    <div className="h-screen flex flex-col align-middle justify-top bg-gray-800 text-white">
 
     <h2 className="text-2xl text-center">Bentornato nella nostra community!</h2>  
         
@@ -57,7 +57,7 @@ export default function LoginPage(){
                 )}
             </div>    
 
-            <button type="submit" className="btn btn-outline">Login</button>       
+            <button type="submit" className="btn btn-outline border-white bg-gray-800 text-white">Login</button>       
         </form>
 </div>
   

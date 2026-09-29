@@ -97,9 +97,9 @@ export default function BodySection({ game, profile_id }) {
       )}
 
       <div className="grid grid-cols-1 sm:grid-cols-12 w-screen px-6 items-center justify-center">
-        <div className="col-span-6 flex flex-col gap-2 items-center">
+        <div className="col-span-6 flex flex-col gap-2 items-center ">
           <textarea
-            className="textarea w-1/2 bg-base-100/80"
+            className="textarea w-1/2 bg-base-100/80 text-gray-800 "
             placeholder="Type your review"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
@@ -111,7 +111,7 @@ export default function BodySection({ game, profile_id }) {
          
           {gameReviews && gameReviews.map((review) => {
             return (
-              <p key={review.id} className="text-white my-3 mx-2 p-2 border border-white">{review.description}</p>
+              <p key={review.id} className="text-gray-800 my-3 mx-2 p-2 border border-white bg-gray-100/80 rounded-md ">{review.description}</p>
             )
           })}
         </div>

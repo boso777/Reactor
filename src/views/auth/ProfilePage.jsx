@@ -40,7 +40,7 @@ export default function ProfilePage(){
 
     return (
   <>
-    <main className="h-screen flex flex-col items-center">
+    <main className="h-screen flex flex-col items-center bg-gray-800 text-white">
       {user && profile && (
         <>
           <article className="mt-10 flex flex-col items-center my-4">
@@ -62,7 +62,7 @@ export default function ProfilePage(){
               <p>Email: {email}</p>
 
               <Link
-                className="btn btn-outline mt-3"
+                className="btn btn-outline mt-3 bg-gray-800 text-white"
                 to={routes.profile_settings}
               >
                 Modifica Profilo

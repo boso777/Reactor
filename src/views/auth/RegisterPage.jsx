@@ -42,7 +42,7 @@ const onSubmit = async (user_data) => {
 
     return(<>
     
-<div className="h-screen flex flex-col align-middle justify-top ">
+<div className="h-screen flex flex-col align-middle justify-top bg-gray-800 text-white ">
 
     <h2 className="text-2xl text-center">Registrati per far parte della nostra community!</h2>  
         
@@ -99,7 +99,7 @@ const onSubmit = async (user_data) => {
                 )}
             </div>    
 
-            <button type="submit" className="btn btn-outline">Registrati</button>       
+            <button type="submit" className="btn btn-outline border-white text-white">Registrati</button>       
         </form>
 </div>
 

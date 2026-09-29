@@ -24,13 +24,13 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 bg-gray-800 text-white">
         <div className="navbar-start">
           <div className="dropdown">
             <div
               tabIndex={0}
               role="button"
-              className="btn btn-ghost btn-circle"
+              className="btn btn-ghost btn-circle text-white"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,7 @@ export default function Navbar() {
             </div>
             <ul
               tabIndex={-1}
-              className="menu menu-lg dropdown-content bg-gray-900 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="menu menu-lg dropdown-content bg-gray-900 rounded-box z-1 mt-3 w-52 p-2 shadow "
             >
               {(!user && (
                 <>
@@ -78,7 +78,7 @@ export default function Navbar() {
           </div>
         </div>
         <div className="navbar-center">
-          <Link to="/" className="btn btn-ghost text-xl">
+          <Link to="/" className="btn btn-ghost text-xl bg-gray-800 text-white">
             Reactor
           </Link>
         </div>
@@ -90,7 +90,7 @@ export default function Navbar() {
             className="hidden sm:block w-32 md:w-48 transition-all duration-300 focus:w-64 bg-blue-100 text-blue-950 px-3 py-1 rounded-sm outline-none"
           />
 
-          <button className="btn btn-ghost btn-circle">
+          <button className="btn btn-ghost btn-circle  text-white">
             <Link to={`/search/${slug}`} aria-label="Search">
               <AiOutlineSearch className="size-5" />
             </Link>

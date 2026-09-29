@@ -47,12 +47,12 @@ export default function ProfileSettingsPage() {
     }
 
     return (
-        <main className="min-h-screen flex flex-col justify-center items-center p-4 py-10 gap-6">
+        <main className="min-h-screen flex flex-col justify-center items-center p-4 py-10 gap-6 bg-gray-800">
             {/* Form Dati Profilo */}
 
 
             <form
-                className="p-6 md:p-10 bg-nav-gray w-full max-w-md md:max-w-xl rounded-box shadow-lg"
+                className="p-6 md:p-10 bg-nav-gray w-full max-w-md md:max-w-xl rounded-box border-white border-2"
                 onSubmit={handleSubmit(onSubmit)}
             >
                 <input
@@ -98,12 +98,12 @@ export default function ProfileSettingsPage() {
 
             {/* Form Avatar */}
             <form
-                className="p-6 md:p-10 bg-nav-gray w-full max-w-md md:max-w-xl rounded-box shadow-lg flex flex-col items-center"
+                className="p-6 md:p-10 bg-nav-gray w-full max-w-md md:max-w-xl  flex flex-col items-center  border-white border-2"
                 onSubmit={handleAvatarSubmit}
             >
                 <input
                     type="file"
-                    className="file-input file-input-lg w-full mb-5"
+                    className="file-input file-input-lg w-full mb-5 "
                     onChange={handleChange}
                 />
                 
